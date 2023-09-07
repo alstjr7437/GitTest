@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>GameRule</title>
+		<style> /* 각 구역별로 클래스로 만들었다. */
+			html, body {margin: 0; padding: 0; width:100% ; height: 100%; }
+				.header { width:100%; height:30%; background-image: url("./Image/r_background.gif") }
+				.nav{width:25%; height: 70%; float: left; margin: 0; padding:0; background-image: url("./Image/r_background.gif") }
+				.section { width:50%; height:70%; float:left; }
+				.aside {width:25%; height: 70%; float: right; margin: 0; padding:0; background-image: url("./Image/r_background.gif")}
+				.footer { width:100%; height:10%; clear: both; background-image: url("./Image/r_background.gif")
+			}
+			body { /* body문의 배경, 요소들의 글씨체, 그림자, 요소색, 배치 중앙으로 설정하였다.*/
+					background-image : url("Image/r_background.gif");
+					font-family: "Times New Roman", Serif;
+					text-shadow : 3px 3px 5px skyBlue;
+					color: ghostwhite;
+					text-align : center;
+				} 
+			hr {border : 3px solid white; } /* hr수평선의 크기를 3px로 실선에다가 하얀색으로 설정하였다. */
+		</style>
+
+		<script type="text/javascript">
+			function start() { // show_main함수를 1초 후에 실행시킨다.
+			  setTimeout(show_main, 1000);
+			}
+			function show_main() {
+			  document.getElementById('main').style.display = "block";
+			}
+		</script>
+	</head>
+
+	<body onload="start()"> <!-- stat()함수를 실행하여 1초후에 main창들이 뜬다. -->
+	  <div class="main" id="main" style="display:none">
+		<header class="header">
+		<div class="title_text" align="center">Game Rule</div>
+			<hr>
+		</header>
+		<header class = "nav"> <!-- 해당 클래스 nav섹션에있는 요소들중 p태그에 있는 요소에 마우스를 올리면 글이 바뀌게 설정해놓았다! -->
+			<p onMouseOver = "this.innerHTML ='아래를 드래그 해보세요!'" onMouseOut = "this.innerHTML='반가워요<br>
+			(마우스를 올리면 재밌는 일이?)'">
+			반가워요<br>
+			(마우스를 올리면 재밌는 일이?)<br>
+			</p>
+			<p style="color:black; text-shadow:0 0 0 black"> <!-- 해당 p태그에는 글자색을 검정으로해놓아서 드래그해야 보이게 설정해놓았다. 해당 내용은 치트키이다. -->
+		  	<br><br>
+			이게임엔 치트키가 있어요!<br><br>
+			H키를 누르게되면 보스전으로 넘어가고 보스의피가 100이 되요!<br>
+			</p>
+			<br><br>
+		  </header>
+		<header class = "section">
+			<div class="main_text">
+				<br>
+				<span id="gamePlay" align="left" style="">
+				<span id="gamePlay_title"><b>게임 플레이 방법</b></span>
+				<br><br>
+				</span>
+			</div>
+			<div style = "padding 20px">
+				방향키 키보드 화살표<br>
+				공격키 z<br>
+				ESC를 누르면 일시정지!<br>
+				다시 ESC를 누르면 게임시작된다.
+				<br><br>
+				화면에서 나타나는 적들을 물리쳐라! <br>
+				일정 score를 획득하면 밑에 경험치바가 찬다.<br>
+				경험치바를 다 채울수록 내 비행선은 강해진다.<br>
+				내가 강해지는 만큼 상대방 수가 많아진다.<br>
+				상대방의 체력, 수, 속도가 많아지고 빨라진다.<br>
+				총 10개의 스테이지(레벨업)과 보스스테이지로 구성되어있다.<br>
+				최종보스를 상대로 살아남아라!<br>
+				<br><br>
+			</div>
+		</header>
+		<header class ="aside"></header>
+		<header class = "footer"> <!-- 메인메뉴로 돌아가는 버튼이다.-->
+			<input type="button" id="mainbutton" name="back" value="main" onclick ="location.href='MainMenu.html'">
+		</header>
+	</div>
+	</body>
+</html>
