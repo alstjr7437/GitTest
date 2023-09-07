@@ -1,0 +1,37 @@
+<style> /* 해당 HTML 문서의 스타일 정보를 정의할 때 사용. 현재 canvas 스타일.*/
+	.title { /* 폰트 굵기를 진하게하고 폰트 크기를 30px로 설정. */
+		font-weight: bold;
+		font-size: 30px;
+	}
+	html, body {margin: 0; padding: 0; width:100% ; height: 100%; } /* html과 body 태그의 여백 및 화면 비율을 설정하였다. */
+		.header { width:100%; height:10%; background-image: url("./Image/r_background.gif") } /* html, body 에서 header클래스는 높이 10%만큼 차지하는 공간을 할당받는다. */
+		.header div { animation: rainbow 5s infinite linear; } /* header태그의 자손 div는 에니메이션 이름 raindow를 가지며 5초마다 무한반복한다. linear은 일정한 속도로 진행*/
+		@keyframes rainbow { /* 각 시간마다 값을 변경시킨다. */
+			0%   {color: red; }
+			10%   {color: orange; }
+			23%  {color: yellow; }
+			36%  {color: yellowgreen; }
+			49%  {color: green; }
+			62%   {color: blue; }
+			74%  {color: indigo; }
+			86%   {color: purple; }
+			100% {color: red; }
+		}
+		/* html, body 에서 leftScreen클래스는 폭 25%, 높이 70%만큼 차지하는 공간을 할당받는다. */
+		.leftScreen{width:25%; height: 70%; float: left; margin: 0; padding:0; background-image: url("./Image/r_background.gif") } 
+		/* html, body 에서 section클래스는 폭 50%, 높이 70%만큼 차지하는 공간을 할당받는다. */
+		.section { width:50%; height:70%; float:left; }
+		/* html, body 에서 rightScreen클래스는 폭 25%, 높이 70%만큼 차지하는 공간을 할당받는다. */
+		.rightScreen {width:25%; height: 70%; float: right; margin: 0; padding:0; background-image: url("./Image/r_background.gif")}
+		/* html, body 에서 footer클래스는 폭 100%, 높이 10%만큼 차지하는 공간을 할당받는다. */
+		.footer { width:100%; height:10%; clear: both; background-image: url("./Image/r_background.gif")
+	}
+	canvas {
+		background: #eef; /* 배경색을 #eef(파랑 마젠타)로 설정함 */
+		display: block; /* 해당 div 영역을 표시 여부 설정 block을 씀으로 가로 한줄에 canvas만 쓰이도록 함.*/
+		margin: 0 auto; /* 마진(외부) 여백 설정 margin: (위,아래) (좌,우) -> 위,아래 여백을 0으로 설정하고 좌, 우를 auto로 설정함으로써 캔버스의 위치가 중앙으로 오게 만든다.*/
+		background-image: url("./Image/r_background.gif"); /* 배경이미지를 불러온다.*/
+		width : 100%;  /* 캔버스태그는 캔버스가 할당받은 해당영역 100%를 다 쓴다.*/
+		height : 100%;
+	}
+</style>
